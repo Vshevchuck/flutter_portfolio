@@ -1,4 +1,4 @@
-# lesson_4_part_2
+# weather_app
 
 A new Flutter project.
 
