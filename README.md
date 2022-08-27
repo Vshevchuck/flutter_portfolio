@@ -4,7 +4,12 @@ The portfolio consists of two projects
 1. Weather app
 2. Messenger app
 
-1.The weather application allows you to see the weather and temperature for 5 days, or hourly to choose from, we can also use the search for your city, the background changes depending on the time of day.
+1.The weather application allows you to see the weather and temperature for 5 days, or hourly to choose from, we can also use the search for your city, the background changes depending on the time of day.!
+
+<img width="344" alt="Снимок экрана 2022-08-28 в 02 22 35" src="https://user-images.githubusercontent.com/59417922/187051389-7700e4d5-9a4b-454a-9666-8bbb1968ba78.png">
+
+<img width="344" alt="Снимок экрана 2022-08-28 в 02 22 35" src="https://user-images.githubusercontent.com/59417922/187051372-43cbed35-f89b-4c84-8cb4-be27503fa528.png">
+
 
 2.The messenger makes it possible to communicate with all people who have registered, it also supports push notifications, localization and viewing the last message in the contact list. The application is based on firestore data
 
