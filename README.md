@@ -11,5 +11,4 @@ The portfolio consists of two projects
 
 <img src="https://user-images.githubusercontent.com/59417922/187051003-508b6370-3259-4e16-9704-f18c99df0465.png" width="300" height="600">
 <img src="https://user-images.githubusercontent.com/59417922/187051004-e3970d2d-4597-4772-9ae4-378a874e659d.png" width="300" height="600">
-![Screenshot_1661265298](https://user-images.githubusercontent.com/59417922/187051004-e3970d2d-4597-4772-9ae4-378a874e659d.png)
 ![Screenshot_1661640636](https://user-images.githubusercontent.com/59417922/187051007-1736ae5b-e7d5-422f-b9e8-24b13ca9ff6e.png)
