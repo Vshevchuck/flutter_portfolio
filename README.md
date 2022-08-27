@@ -8,7 +8,8 @@ The portfolio consists of two projects
 
 <img width="344" alt="Снимок экрана 2022-08-28 в 02 22 35" src="https://user-images.githubusercontent.com/59417922/187051389-7700e4d5-9a4b-454a-9666-8bbb1968ba78.png">
 
-<img width="344" alt="Снимок экрана 2022-08-28 в 02 22 35" src="https://user-images.githubusercontent.com/59417922/187051372-43cbed35-f89b-4c84-8cb4-be27503fa528.png">
+
+<img width="343" alt="Снимок экрана 2022-08-28 в 02 24 49" src="https://user-images.githubusercontent.com/59417922/187051396-7151bcdd-a392-4259-b7c6-4bf0ac472f43.png">
 
 
 2.The messenger makes it possible to communicate with all people who have registered, it also supports push notifications, localization and viewing the last message in the contact list. The application is based on firestore data
