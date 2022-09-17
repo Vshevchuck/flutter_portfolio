@@ -4,7 +4,8 @@ import 'package:http/http.dart' as http;
 
 import '../../models/push_notification_model.dart';
 
-
+///Push Notification responsible for sending messages to the phone
+///when the application is minimized or disabled
 class PushNotification{
   static const String pushNotificationServerKey ="AAAAzmp6sfg:APA91bHYb6nFgJApW"
       "3H8iDiwzEfsciudHS-KGwraAqqle5E0547oUCfZAPWm2rFCnGbd-Eo1TTy3lRWYpQAEe3fgZ"

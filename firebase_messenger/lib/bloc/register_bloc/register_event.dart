@@ -5,6 +5,6 @@ class RegisterEvent{}
 
 class SetInitialRegisterEvent extends RegisterEvent{}
 class GetUserDataEvent extends RegisterEvent {
-  final UserRegister userRegister;
+  final UserAuth userRegister;
   GetUserDataEvent(this.userRegister);
 }

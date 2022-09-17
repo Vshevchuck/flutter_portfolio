@@ -1,5 +1,3 @@
-import 'package:flutter/src/widgets/framework.dart';
-
 class  UserEvent{}
 
 class UserLoadingEvent extends UserEvent{

@@ -44,9 +44,9 @@ class SignInButtonWidget extends StatelessWidget {
               onSurface: Colors.transparent,
               shadowColor: Colors.transparent,),
             onPressed: () async {
-              UserLogin userModel = UserLogin(
-                  LoginPageState.emailController.text,
-                  LoginPageState.passwordController.text);
+              UserAuth userModel = UserAuth(
+                  email:LoginPageState.emailController.text,
+                  password:LoginPageState.passwordController.text);
               loginBloc.add(GetUserDataEvent(userModel));
               LoginPageState.emailController.text = "";
               LoginPageState.passwordController.text = "";

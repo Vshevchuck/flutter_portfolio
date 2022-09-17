@@ -1,6 +1,7 @@
 import 'package:firebase_messenger/models/push_notification_model.g.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+///Model notification consist of title(from user) and body(message)
 class PushNotificationModel {
   Notification notification;
   String to;

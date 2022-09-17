@@ -2,14 +2,11 @@ import 'package:firebase_messenger/bloc/login_bloc/login_event.dart';
 import 'package:firebase_messenger/bloc/login_bloc/login_state.dart';
 import 'package:firebase_messenger/networking/firebase_auth_client.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import '../../models/user_model.dart';
-import '../user_bloc/user_state.dart';
 
+/// Authorizes the user and checks the information entered in the fields
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  UserLogin userLogin = UserLogin('Empty', 'Empty');
 
   @override
   get initialState => LoginEmptyState();
@@ -31,7 +28,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     }
   }
 
-  String _checkLoginError(UserLogin user, FirebaseAuthException e) {
+  /// checks the information entered in the fields
+  String _checkLoginError(UserAuth user, FirebaseAuthException e) {
     if (user.email.isEmpty || user.password.isEmpty) {
       return ('Fill in all the fields');
     }

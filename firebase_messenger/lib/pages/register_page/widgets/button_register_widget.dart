@@ -51,10 +51,10 @@ class ButtonRegisterWidget extends StatelessWidget {
                       shadowColor: Colors.transparent,
                     ),
                     onPressed: () {
-                      UserRegister userModel = UserRegister(
-                          RegisterPage.nameController.text,
-                          RegisterPage.emailController.text,
-                          RegisterPage.passwordController.text);
+                      UserAuth userModel = UserAuth(
+                          name: RegisterPage.nameController.text,
+                          email: RegisterPage.emailController.text,
+                          password:RegisterPage.passwordController.text);
                       registerBloc.add(GetUserDataEvent(userModel));
                       RegisterPage.emailController.text = "";
                       RegisterPage.passwordController.text = "";

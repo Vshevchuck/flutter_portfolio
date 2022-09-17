@@ -4,6 +4,7 @@ class GetChatId extends ChatEvent{
   final String chatId;
   GetChatId(this.chatId);
 }
+
 class GetReversedChat extends ChatEvent{
   final List<dynamic> chat;
   GetReversedChat(this.chat);

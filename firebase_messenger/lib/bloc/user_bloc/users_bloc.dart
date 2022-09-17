@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../generated/locale_keys.g.dart';
 import '../../models/user_model.dart';
 
+///UserBloc is responsible for loading and displaying currently registered users
 class UserBloc extends Bloc<UserEvent, UserState> {
   final Firestore firestore = Firestore();
   String id = '';

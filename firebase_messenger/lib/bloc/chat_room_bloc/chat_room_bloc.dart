@@ -1,11 +1,11 @@
 import 'package:firebase_messenger/bloc/chat_room_bloc/chat_room_event.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../generated/locale_keys.g.dart';
 import '../../networking/firestore.dart';
 import 'chat_room_state.dart';
 
+///ChatRoomBloc check availability chat room and creates a new room for two users
+///if the room has not yet been created
 class ChatRoomBloc extends Bloc<ChatRoomEvent, ChatRoomState> {
   final Firestore firestore = Firestore();
 
@@ -17,7 +17,7 @@ class ChatRoomBloc extends Bloc<ChatRoomEvent, ChatRoomState> {
     bool newRoom = true;
     String id = '';
     if (event is CreateChatRoomEvent) {
-      id = await _addChat(event.OurId,event.IdSecondUser);
+      id = await _addChat(event.OurId, event.IdSecondUser);
       firestore.listenUsers().listen((snapshot) {
         for (int i = snapshot.docs.length - 1; i >= 0; i--) {
           if (snapshot.docs[i].get('id') == event.OurId) {
@@ -46,13 +46,14 @@ class ChatRoomBloc extends Bloc<ChatRoomEvent, ChatRoomState> {
     }
   }
 
+  ///check the visibility of the chat room
   void _findUserChatRooms(String loginedUserId, String secondUserId) {
     firestore.listenUserbyId(loginedUserId).listen((snapshot) {
-      add(GetChatRoomEvent(
-          snapshot.docs.first.get('chatrooms'), secondUserId));
+      add(GetChatRoomEvent(snapshot.docs.first.get('chatrooms'), secondUserId));
     });
   }
 
+  ///add created chat to the user's chat list
   void _addChatToUser(String id, String secondUser,
       QuerySnapshot<Map<String, dynamic>> snapshot, int i) {
     Map<String, dynamic> chatrooms =
@@ -61,10 +62,11 @@ class ChatRoomBloc extends Bloc<ChatRoomEvent, ChatRoomState> {
     firestore.addChatToUser(snapshot, i, chatrooms);
   }
 
-  Future<String> _addChat(String ourId,String idSecondUser) async {
+  ///add new chat to firestore data base
+  Future<String> _addChat(String ourId, String idSecondUser) async {
     String id = '';
     await firestore
-        .addChat(ourId,idSecondUser)
+        .addChat(ourId, idSecondUser)
         .then((value) => ((id = value.id)));
     return id;
   }

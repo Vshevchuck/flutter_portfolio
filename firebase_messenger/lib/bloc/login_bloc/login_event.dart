@@ -8,6 +8,6 @@ class LoginEvent{}
 
 class SetInitialEvent extends LoginEvent{}
 class GetUserDataEvent extends LoginEvent{
-  final UserLogin userLogin;
+  final UserAuth userLogin;
   GetUserDataEvent(this.userLogin);
 }

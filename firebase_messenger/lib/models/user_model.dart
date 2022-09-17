@@ -1,10 +1,3 @@
-class UserRegister{
-  final String name;
-  final String email;
-  final String password;
-  UserRegister(this.name, this.email,this.password);
-}
-
 class UserModel{
   final String name;
   final String email;
@@ -16,8 +9,10 @@ class UserModel{
   }
 }
 
-class UserLogin{
+/// Model for register and login user
+class UserAuth {
+  final String? name;
   final String email;
   final String password;
-  UserLogin(this.email,this.password);
+  UserAuth({this.name, required this.email, required this.password});
 }
