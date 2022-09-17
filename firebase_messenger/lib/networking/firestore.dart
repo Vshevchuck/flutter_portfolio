@@ -5,6 +5,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 import '../generated/locale_keys.g.dart';
 
+///Operations with firestore data base
 class Firestore {
   final firestore = FirebaseFirestore.instance;
 
